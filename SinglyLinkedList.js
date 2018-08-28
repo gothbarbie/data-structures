@@ -21,8 +21,21 @@ class SinglyLinkedList {
       current = current.next
       counter++
     }
-    console.log(current)
     return current
+  }
+
+  insert(index, value) {
+    if (index < 0 || index > this.length) return false
+    if (index === this.length) return !!this.push(value)
+    if (index === 0) return !!this.unshift(value)
+
+    const newNode = new Node(value)
+    const previous = this.get(index - 1)
+    const temp = previous.next
+    previous.next = newNode
+    newNode.next = temp
+    this.length++
+    return true
   }
 
   pop() {
@@ -61,6 +74,45 @@ class SinglyLinkedList {
     return this
   }
 
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined
+    if (index === 0) return this.shift()
+    if (index === this.length - 1) return this.pop()
+
+    const previous = this.get(index - 1)
+    const removed = previous.next
+    previous.next = removed.next
+    this.length--
+    return removed
+  }
+
+  reverse() {
+    let node = this.head
+    this.head = this.tail
+    this.tail = node
+
+    let previous = null
+    let next = null
+
+    for (let i = 0; i < this.length; i++) {
+      next = node.next
+      node.next = previous
+      previous = node
+      node = next
+    }
+
+    return this
+  }
+
+  set(index, val) {
+    let foundNode = this.get(index)
+    if (foundNode) {
+      foundNode.val = val
+      return true
+    }
+    return false
+  }
+
   shift() {
     if (!this.head) return undefined
 
@@ -78,7 +130,6 @@ class SinglyLinkedList {
   traverse() {
     let current = this.head
     while (current) {
-      console.log(current.val)
       current = current.next
     }
   }
@@ -99,16 +150,10 @@ class SinglyLinkedList {
 }
 
 const list = new SinglyLinkedList()
-// list.push('hello')
-// list.push('you!')
-// list.traverse()
-// list.pop()
-// list.pop()
-// list.shift()
-// list.shift()
 list.unshift('argh!')
-list.get(0)
-// console.log(list)
-// console.log(list)
-
-// console.log(list)
+list.set(1, 'arguh?')
+list.insert(1, 'araghah!')
+list.push('bhruugh!')
+console.log(list)
+list.reverse()
+console.log(list)
