@@ -138,7 +138,6 @@ class DoublyLinkedList {
     if (index === this.length) return this.pop()
 
     const remove = this.get(index)
-
     remove.prev.next = remove.next
     remove.next.prev = remove.prev
     remove.next = null
