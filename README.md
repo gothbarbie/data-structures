@@ -46,9 +46,19 @@
 ## Trees
 
 - Parent/child relationships.
-- One parent can have several children. There are no relationship between siblings or from child to parent. - Everything is unidirectional.
+- One parent can have several children. There are no relationship between siblings or from child to parent.
+- Everything is one-directional.
 - Leaf: Child with no children
 - Edge: Path between parent/child.
 - Examples of trees: HTML and the DOM, Network Routing, Folders and files.
+- Binary Search Tree:
+  - Has maximum 2 children.
+  - The child to the left is always smaller then the parent.
+  - The child to the right is always bigger than the parent.
+  - Big O:
+    - Insert: O(log n)
+    - Searching: O(log n)
+
+## Tree Traversal
 
 ## Graphs
