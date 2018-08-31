@@ -101,7 +101,7 @@
 
 ### Hash Functions
 
-- Should be: Fast, deterministic
+- Should be: Fast, deterministic, distribute evenly
 - Avoiding collisions:
   - Separate Chaining - Store conflicting values together (allows for more content).
   - Linear Probing - Store at next vacant destination when conflict happens.
