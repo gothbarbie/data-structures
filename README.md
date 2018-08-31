@@ -58,7 +58,7 @@
   - The child to the left is always smaller then the parent.
   - The child to the right is always bigger than the parent.
   - Big O:
-    - Insert: O(log n)
+    - Insertion: O(log n)
     - Searching: O(log n)
 
 ### Tree Traversal
@@ -76,8 +76,8 @@
 - Min Binary Heap: Parents are always smaller than their children.
 - Used for things like Priority Queues and Graph Traversals.
 - Big O:
-  - Insert: O(log n)
-  - Remove: O(log n)
+  - Insertion: O(log n)
+  - Removal: O(log n)
 
 #### Priority Queues
 
@@ -94,5 +94,16 @@
   - JavaScript: Objects, Maps
   - Java, Go & Scala: Maps
   - Ruby: Hashes
+- Big O:
+  - Insert: O(1)
+  - Deletion: O(1)
+  - Access: O(1)
 
-## Graphs
+### Hash Functions
+
+- Should be: Fast, deterministic
+- Avoiding collisions:
+  - Separate Chaining - Store conflicting values together (allows for more content).
+  - Linear Probing - Store at next vacant destination when conflict happens.
+
+## 4. Graphs
