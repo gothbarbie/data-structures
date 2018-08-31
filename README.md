@@ -61,4 +61,16 @@
 
 ## Tree Traversal
 
+- Breadth First Search: Traverse through each level, from parent to child, one level at a time.
+- Depth First Search:
+  - PreOrder: Order before checking children.
+    - Can be used to export a tree structure so that it is easily reconstructed.
+  - PostOrder: Order after checking children.
+  - InOrder: Order between left and right children, so result is from smaller to larger.
+
+## Binary Heaps
+
+- Parents are always larger than the children.
+- Used for things like Priority Queues and Graph Traversals.
+
 ## Graphs
