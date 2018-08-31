@@ -59,6 +59,7 @@ class MaxBinaryHeap {
 
       this.values[index] = this.values[swapIndex]
       this.values[swapIndex] = element
+      index = swapIndex
     }
   }
 
@@ -70,9 +71,10 @@ class MaxBinaryHeap {
   extractMax() {
     const max = this.values[0]
     const end = this.values.pop()
-
-    this.values[0] = end
-    this.sinkDown()
+    if (this.values.length > 0) {
+      this.values[0] = end
+      this.sinkDown()
+    }
     return max
   }
 }
@@ -85,6 +87,21 @@ maxBinaryHeap.insert(18)
 maxBinaryHeap.insert(27)
 maxBinaryHeap.insert(12)
 maxBinaryHeap.insert(55)
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+// console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
+console.log(maxBinaryHeap)
+console.log(maxBinaryHeap.extractMax())
 console.log(maxBinaryHeap)
 console.log(maxBinaryHeap.extractMax())
 console.log(maxBinaryHeap)
