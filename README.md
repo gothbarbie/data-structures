@@ -107,3 +107,53 @@
   - Linear Probing - Store at next vacant destination when conflict happens.
 
 ## 4. Graphs
+
+- Set of nodes (or "vertices" or "points") with a set of connections (edges) between each other.
+- Examples:
+  - Social Networks
+  - Location / Mapping
+  - Shop recommendations
+  - Visual Hierarchy
+  - File System Optimizations
+
+### Types of graphs
+
+- Tree: One path between each node.
+- Directed: Has a beginning and end (like a path to a destination).
+- Undirected: Has no beginning or end (like friendships on Facebook).
+- Weighted: The path has a value (like the length of a path).
+- Unweighted: The path has no value (like who follows who on Instagram).
+
+### Types of edges
+
+- Adjacency List:
+  - List of arrays with connections between different nodes.
+  - Takes up more space.
+  - Slower to iterate over all edges.
+  - Faster to lookup specific edge.
+- Adjacency Matrix:
+  - A matrix of connections between nodes, 1 for true, 0 for false.
+  - Can take up less space.
+  - Faster to iterate over all edges.
+  - Can be slower to lookup specific edge.
+- Big O: (V = Vertices, E = Edges)
+
+  | Operation     | Adjacency List | Adjacency Matrix |
+  | ------------- | -------------- | ---------------- |
+  | Add Vertex    | O(1)           | O(V^2)           |
+  | Add Edge      | O(1)           | O(1)             |
+  | Remove Vertex | O(V+E)         | O(V^2)           |
+  | Remove Edge   | O(V+E)         | O(1)             |
+  | Query         | O(V+E)         | O(1)             |
+  | Storage       | O(V+E)         | O(V^2)           |
+
+### Graph Traversal
+
+- Going through each node and check their connections.
+- Examples:
+  - Peer to peer networking
+  - Web crawlers
+  - Finding closest match
+  - Finding shortest path
+- Depth first: Prioritize going to new nodes before backtracking.
+- Width first: Prioritize backtracking to known nodes before going to new nodes.
