@@ -1,6 +1,8 @@
 # Data Structures
 
-## Singly Linked List
+## 1. Linked Lists
+
+### Singly Linked List
 
 - A data structure that contains a head, tail and length property.
 - Consists of nodes.
@@ -11,7 +13,7 @@
   - Searching - O(N)
   - Access - O(N)
 
-## Doubly Linked List
+### Doubly Linked List
 
 - Has connections to both parent and child in each Node.
 - Takes up more memory, but faster to find items in.
@@ -21,7 +23,7 @@
   - Searching - O(N)
   - Access - O(N)
 
-## Stacks
+### Stacks
 
 - Implements Doubly Linked List
 - LI/FO: Last in, first out
@@ -36,14 +38,14 @@
   - Searching O(N)
   - Access O(N)
 
-## Queues
+### Queues
 
 - Implements Singly Linked List
 - FI/FO: First In, first out
 - Add att end, remove at beginning.
 - Big O:
 
-## Trees
+## 2. Trees
 
 - Parent/child relationships.
 - One parent can have several children. There are no relationship between siblings or from child to parent.
@@ -59,7 +61,7 @@
     - Insert: O(log n)
     - Searching: O(log n)
 
-## Tree Traversal
+### Tree Traversal
 
 - Breadth First Search: Traverse through each level, from parent to child, one level at a time.
 - Depth First Search:
@@ -68,9 +70,29 @@
   - PostOrder: Order after checking children.
   - InOrder: Order between left and right children, so result is from smaller to larger.
 
-## Binary Heaps
+### Binary Heaps
 
-- Parents are always larger than the children.
+- Max Binary Heap: Parents are always larger than their children.
+- Min Binary Heap: Parents are always smaller than their children.
 - Used for things like Priority Queues and Graph Traversals.
+- Big O:
+  - Insert: O(log n)
+  - Remove: O(log n)
+
+#### Priority Queues
+
+- List of things with different priorities, such as patients in an Emergency Room.
+- Can be implemented as a Heap to be more effective than for example an Array.
+
+## 3. Hash Tables
+
+- Stores key-value pairs.
+- Like arrays, but not ordered.
+- Why we use them: They're fast!
+- Examples:
+  - Python: Dictionaries
+  - JavaScript: Objects, Maps
+  - Java, Go & Scala: Maps
+  - Ruby: Hashes
 
 ## Graphs
