@@ -157,3 +157,11 @@
   - Finding shortest path
 - Depth first: Prioritize going to new nodes before backtracking.
 - Width first: Prioritize backtracking to known nodes before going to new nodes.
+
+### Dijkstra's Algorithm
+
+- Examples:
+  - GPS, finding shortest route
+  - Network Routing, shortest path
+  - Biology, spread of diseases
+  - Airline tickets, cheapest route
